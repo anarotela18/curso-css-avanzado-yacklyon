@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de CSS AVANZADO 🔥 transiciones - yacklyon</title>
+    <style>
+        /*div {
+            width: 150px;
+            height: 150px;
+            background: cornflowerblue;
+            transition: all 1s;
+             border-radius: 50%;
+            transition: width 2s;
+        }
+        div:hover{
+            width: 300px;
+            background-color: red;
+        } */
+        /* #transicion {
+            transition-timing-function: linear;
+        }
+        
+        div:hover {
+            width: 450px;
+        } */
+        
+        #transicion {
+            background: orange;
+            width: 50px;
+            height: 150px;
+            margin-bottom: 100px;
+            animation: mover-derecha 2s ease-in infinite;
+            animation-delay: 1000ms;
+        }
+        
+        @keyframes mover-derecha {
+            0% {
+                transform: translateX(0px);
+            }
+            100% {
+                transform: translateX(300px);
+            }
+        }
+        
+        #transicion2 {
+            background: coral;
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+            animation: mover 5s infinite;
+            animation-delay: 1000ms;
+        }
+        
+        @keyframes mover {
+            0% {
+                transform: translateX(0px);
+            }
+            25% {
+                transform: translateX(200px);
+                background: linear-gradient(120deg, red 0%, darkred 100%);
+            }
+            50% {
+                transform: translateY(200px) translateX(200px);
+                background: linear-gradient(to top, blue 0%, darkblue 100%);
+            }
+            75% {
+                transform: translateX(0px) translateY(200px);
+                background: linear-gradient(to top, orange 0%, coral 100%);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Transiciones en CSS</h1>
+        <div id="transicion"></div>
+        <div id="transicion2"></div>
+    </center>
+</body>
+
+</html>

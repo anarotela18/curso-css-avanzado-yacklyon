@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de CSS AVANZADO 🔥 transformación 2D - yacklyon</title>
+    <style>
+        div {
+            /* width: 180px;
+            height: 180px;
+            background: linear-gradient(orange, red);
+            border: 7px solid darkred;
+            transform: translateX(180px);
+            transform: rotateX(180deg);
+            transform: skewX(45deg);
+            transform: scaleX(2); */
+            background: linear-gradient(180deg, red, orange);
+            width: 200px;
+            height: 200px;
+            animation: skew 3s infinite;
+            transform: skew(20deg);
+            animation-direction: alternate;
+        }
+        
+        @keyframes skew {
+            0% {
+                transform: skew(20deg, 20deg);
+            }
+            100% {
+                transform: skew(-20deg, -20deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>transformacion 2D</h1>
+    <div></div>
+</body>
+
+</html>

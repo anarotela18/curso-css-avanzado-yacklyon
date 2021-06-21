@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de CSS AVANZADO 🔥 IMAGENES - yacklyon</title>
+    <style>
+        /* img {
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            border-radius: 24px;
+            padding: 10px;
+        }
+        
+        img:hover {
+            box-shadow: 0 0 12px 15px rgba(173, 52, 52, 0.5);
+        } */
+        
+        img {
+            width: 100%;
+            opacity: 0.5;
+        }
+        
+        .imagen {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+        
+        div.lobo {
+            width: 80%;
+            background-color: white;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.19);
+            margin-bottom: 35px;
+            position: relative;
+        }
+        
+        div.texto {
+            text-align: center;
+            font-size: 20px;
+            padding: 10px 10px;
+        }
+        
+        div.texto_lobo {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .lobo:hover .imagen {
+            opacity: 0.3;
+        }
+        
+        .lobo:hover .texto_lobo {
+            opacity: 1;
+        }
+        
+        .efecto_text {
+            background-color: red;
+            color: white;
+            font-size: 38px;
+            padding: 6px 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Estilos en imagenes</h1>
+        <!-- <img src="luna.png" alt=""> -->
+
+        <div class="lobo">
+            <img src="lobo.jpg" alt="" class="imagen">
+            <div class="texto_lobo">
+                <div class="efecto_text">
+                    LOBO
+                </div>
+            </div>
+            <div class="texto">
+                <p>COLMILLO BLANCO</p>
+            </div>
+        </div>
+    </center>
+</body>
+
+</html>

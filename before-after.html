@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de CSS AVANZADO 🔥 BEFORE & AFTER</title>
+    <style>
+        p::first-letter {
+            font-weight: bold;
+        }
+        
+        p::first-line {
+            color: red;
+        }
+        
+        p::before {
+            content: "ABC";
+            font-size: 20px;
+            color: blue;
+        }
+        
+        p::after {
+            content: "XYZ";
+            font-size: 20px;
+            color: green;
+        }
+        
+        .clic::after {
+            content: "...";
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 50px;
+        }
+        
+        .contenedor {
+            text-align: center;
+        }
+        
+        h1 {
+            text-transform: uppercase;
+            margin: 200px 0;
+            display: inline-block;
+            position: relative;
+        }
+        
+        h1::before {
+            content: "";
+            width: 30%;
+            height: 4px;
+            background: red;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.8s all;
+        }
+        
+        h1::after {
+            content: "";
+            width: 0%;
+            height: 4px;
+            background: red;
+            position: absolute;
+            bottom: -8%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.8s all;
+        }
+        
+        h1:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <span>YACKLYON</span>
+        <span>videos</span>
+        <span>tutoriales</span>
+    </p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique perspiciatis a enim eos perferendis sed ratione accusantium ad? Magnam, voluptatem!
+        <a href="#" class="clic">INGRESA AQUI</a>
+    </p>
+
+    <p>
+        <span>YACKLYON</span>
+        <span>videos</span>
+        <span>tutoriales</span>
+    </p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique perspiciatis a enim eos perferendis sed ratione accusantium ad? Magnam, voluptatem!
+        <a href="#" class="clic">INGRESA AQUI</a>
+    </p>
+
+
+    <p>
+        <span>YACKLYON</span>
+        <span>videos</span>
+        <span>tutoriales</span>
+    </p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique perspiciatis a enim eos perferendis sed ratione accusantium ad? Magnam, voluptatem!
+        <a href="#" class="clic">INGRESA AQUI</a>
+    </p>
+    <br><br><br>
+    <hr>
+    <hr><br><br><br>
+    <div class="contenedor">
+        <h1>YACKLYON</h1>
+    </div>
+</body>
+
+</html>

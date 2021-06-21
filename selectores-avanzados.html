@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de CSS AVANZADO 🔥 SELECTORES AVANZADOS</title>
+    <style>
+        p>span {
+            color: red;
+        }
+        
+        h1+h2 {
+            color: green;
+        }
+        
+        h1~p {
+            background-color: orange;
+        }
+        
+        h1[titulo="curso"] {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Selector Hijos</p>
+    <p>
+        <a href="#"><span>Texto de ejemplo</span></a>
+    </p>
+
+    <p>Selector Adyacentes</p>
+    <h1>Curso de CSS3</h1>
+    <h2>Curso de Python</h2>
+    <h2>Curso de Java</h2>
+
+    <p>Selectores hermano</p>
+    <div class="contenedor">
+        <p>uno</p>
+        <h1>dos</h1>
+        <span>tres</span>
+        <p>cuatro</p>
+        <div>cinco</div>
+        <h2>seis</h2>
+        <p>siete</p>
+        <span>ocho</span>
+    </div>
+
+    <p>Selector de atributo</p>
+    <h1 titulo="curso">Curso de CSS</h1>
+
+</body>
+
+</html>

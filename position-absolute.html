@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de CSS AVANZADO 🔥 POSITION ABSOLUTE</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 1.5;
+        }
+        
+        .cuadro {
+            position: relative;
+            width: 80%;
+            box-shadow: 0 0 25px 0 rgba(0, 0, 0, .3);
+        }
+        
+        .cuadro::before,
+        .cuadro::after {
+            content: "";
+            position: absolute;
+            border: 2px solid orange;
+        }
+        
+        .cuadro::before {
+            top: 1rem;
+            bottom: .5rem;
+            right: 1rem;
+        }
+        
+        .cuadro::after {
+            bottom: 1rem;
+            right: .5rem;
+            left: 1rem;
+        }
+        
+        .img_cuadro {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .cont_cuadro {
+            background: rgba(0, 0, 0, .5);
+            color: white;
+            padding: 2rem;
+        }
+        
+        .titulo,
+        .text {
+            margin: 0;
+        }
+        
+        .titulo {
+            font-size: 3rem;
+            line-height: 1.3;
+            margin-bottom: .6em;
+            position: relative;
+            z-index: 1;
+            color: black;
+        }
+        
+        .titulo::before {
+            content: "";
+            position: absolute;
+            background: orange;
+            width: 100%;
+            top: .1em;
+            bottom: -.15em;
+            left: -4rem;
+            z-index: -1;
+            box-shadow: inset -15px 0 10px -10px rgba(0, 0, 0, .5);
+        }
+        
+        .titulo::after {
+            content: "";
+            position: absolute;
+            background: orange;
+            top: -.1em;
+            bottom: -.15em;
+            width: 2rem;
+            left: calc(100% + 2rem);
+            box-shadow: inset 12px 0 10px -10px rgba(0, 0, 0, .5);
+        }
+        
+        .text {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cuadro">
+        <img src="lobo.jpg" alt="gato" class="img_cuadro">
+        <div class="cont_cuadro">
+            <h1 class="titulo">LOBOS DEL MONTE</h1>
+            <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel repellendus nisi hic fugit dignissimos fuga, tempora tenetur! Eligendi labore commodi laborum quisquam sed iure nulla magni pariatur eos eum! Inventore suscipit ea iusto minima
+                deleniti, fugiat veniam ipsum quaerat autem amet magni consectetur tenetur nihil rerum sit natus quam eum id delectus dolorem nam laudantium in ad reiciendis? Repellat reiciendis cum minima officiis delectus alias facilis consectetur.
+                Quos architecto quas est natus dicta. Accusantium quos praesentium velit molestias eligendi, minus magnam quod. Impedit consequuntur, expedita non quam quaerat consequatur ullam fugiat, nulla vero temporibus quis, neque recusandae eius
+                esse inventore!</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de CSS AVANZADO 🔥 HERRAMIENTAS DE INFORMACION - yacklyon</title>
+    <style>
+        .texto_uno {
+            background-color: crimson;
+            color: white;
+            font-size: 38px;
+            padding: 15px 32px;
+            margin: 100px;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .texto_uno .texto_dos {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: whitesmoke;
+            z-index: 1;
+            position: absolute;
+            text-align: center;
+            border-radius: 6px;
+            top: 65px;
+            left: 80%;
+            margin-left: -60px;
+            padding: 6px 0;
+        }
+        
+        .texto_uno .texto_dos::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent black;
+        }
+        
+        .texto_uno:hover .texto_dos {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Informacion en css</h1>
+        <div class="texto_uno">
+            toca aqui
+            <span class="texto_dos">Hola</span>
+        </div>
+    </center>
+</body>
+
+</html>

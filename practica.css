@@ -1,0 +1,104 @@
+body {
+    background-color: beige;
+    color: brown;
+    font-size: 13px;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#cabecera {
+    background-color: darkblue;
+}
+
+#cabecera h1 {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+nav {
+    background-color: darkturquoise;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: aliceblue;
+    font-size: 28px;
+    text-decoration: none;
+    padding: 8px 10px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: cyan;
+    color: black;
+}
+
+#cont-img {
+    background-image: url("ash.jpg");
+    height: 280px;
+    background-position: center;
+    margin-bottom: 30px;
+}
+
+#cont-img .imagen h1 {
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    padding-top: 25px;
+    margin: 0;
+}
+
+.contenedor {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#cont-principal {
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+    padding: 0px 30px;
+}
+
+#barra-lateral {
+    float: right;
+    width: 30%;
+    background-color: deepskyblue;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#part-inf {
+    background-color: darkblue;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 650px) {
+    #cont-principal {
+        width: 100%;
+        float: none;
+    }
+    #barra-lateral {
+        width: 100%;
+        float: none;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de CSS AVANZADO 🔥 MEDIA QUERIES</title>
+    <style>
+        div {
+            background-color: darkcyan;
+            padding: 10px;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        .texto {
+            color: white;
+            font-size: 20px;
+        }
+        
+        #contenedor {
+            width: 960px;
+            margin: 0 auto;
+        }
+        
+        #columna-izq {
+            width: 700px;
+            float: left;
+            background-color: greenyellow;
+        }
+        
+        #columna-der {
+            width: 260px;
+            float: left;
+            background-color: coral;
+        }
+        
+        @media screen and (max-width: 480px) {
+            div {
+                background-color: darkred;
+            }
+        }
+        
+        @media screen and (max-width:959px) {
+            #contenedor {
+                width: 100%;
+            }
+            #columna-izq {
+                width: 70%;
+            }
+            #columna-der {
+                width: 30%;
+            }
+        }
+        
+        @media screen and (max-width: 740px) {
+            #columna-izq {
+                width: 100%;
+            }
+            #columna-der {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>MEDIA QUERIES</h1>
+        <div>
+            <p class="texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat dolor harum amet dolorem. Aut quam optio expedita ullam excepturi totam ipsum distinctio amet eius atque suscipit nisi eum tempora rerum incidunt alias sapiente sed at, dolorum
+                blanditiis. Minima harum dolorem sit officia. Aspernatur adipisci animi cupiditate, quas, itaque nemo, praesentium veritatis accusantium quae ipsa eius exercitationem maxime ex velit quo. Nulla sint expedita assumenda nihil animi earum
+                voluptas eius qui voluptatem. Voluptate culpa laborum dolorum aperiam? Doloremque reprehenderit ullam ut quas impedit. Ullam numquam voluptatem sunt, animi temporibus dolore quia doloribus assumenda, eum nostrum asperiores libero laudantium
+                veritatis mollitia excepturi.</p>
+        </div>
+        <br><br>
+        <div id="contenedor">
+            <img src="banner.png" alt="">
+            <section id="columna-izq">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, repellat?
+            </section>
+            <aside id="columna-der">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, libero.
+            </aside>
+        </div>
+    </center>
+</body>
+
+</html>
