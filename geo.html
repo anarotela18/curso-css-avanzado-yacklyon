@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocalización</title>
+    <style>
+        #mapa {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mi ubicación</h1>
+    <button onclick="getLocation()">ACTIVAR</button>
+    <p id="geo"></p>
+    <div id="mapa"></div>
+    <script>
+        var x = document.getElementById("geo");
+
+        function getLocation() {
+            if (navigator.getlocation) {
+                navigator.getlocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "NO ES COMPATIBLE CON TU NAVEGADOR";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "LATITUD: " + position.coords.latitude + "<br> LONGITUD: " + position.coords.longitude;
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgZZK8umUqJn8d5CoIZqWPJ_qtMfqD9q0&callback=initMap" async defer></script>
+</body>
+
+</html>

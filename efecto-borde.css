@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://picsum.photos/2000");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+nav {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    width: 70%;
+    height: 80px;
+    background-color: black;
+    margin: 6% 15%;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+nav li {
+    display: inline-block;
+    margin: .5em 1em;
+    padding: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: aliceblue;
+    position: relative;
+    padding: .5em .7em;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: cyan;
+}
+
+nav a::before,
+nav a::after {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content: '';
+    transition: all ease 0.3s;
+    opacity: 0;
+}
+
+nav a::before {
+    right: 0;
+    top: 0;
+    border-top: 2px solid cyan;
+    border-right: 4px solid cyan;
+    transform: translate(-100%, 50%);
+}
+
+nav a::after {
+    left: 0;
+    bottom: 0;
+    border-bottom: 2px solid cyan;
+    border-left: 4px solid cyan;
+    transform: translate(100%, -50%);
+}
+
+nav a:hover::before,
+nav a:hover::after {
+    transform: translate(0%, 0%);
+    opacity: 1;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <style>
+        .centrar {
+            text-align: center;
+        }
+        
+        video {
+            margin-bottom: 50px;
+        }
+        
+        button {
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="centrar">
+        <button onclick="playpause()"> play/pause</button>
+        <button onclick="completa()">completa</button>
+        <button onclick="normal()">normal</button>
+        <video id="videoEjemplo" width="360">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4">
+        </video>
+        <br>
+        <iframe src="https://www.youtube.com/embed/6TewE1BCZ_M" frameborder="0"></iframe>
+    </div>
+</body>
+<script>
+    var miVideo = document.getElementById("videoEjemplo");
+
+    function playpause() {
+        if (miVideo.paused) {
+            miVideo.play();
+        } else {
+            miVideo.pause();
+        }
+    }
+
+    function completa() {
+        miVideo.width = 720;
+    }
+
+    function normal() {
+        miVideo.width = 360;
+    }
+</script>
+
+</html>

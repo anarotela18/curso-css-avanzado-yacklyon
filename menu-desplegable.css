@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url("https://picsum.photos/1920");
+    background-position: center;
+    height: 100vh;
+}
+
+nav {
+    height: 50px;
+    background-color: black;
+}
+
+.logo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 30px;
+    line-height: 50px;
+    padding-left: 20px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 35px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: beige;
+    padding: 0 15px;
+    display: block;
+    line-height: 50px;
+    font-size: 18px;
+    background: black;
+    transition: .4s;
+}
+
+nav ul li a:hover,
+nav ul li a.activar {
+    color: brown;
+}
+
+nav ul li:hover>ul {
+    top: 50px;
+    opacity: 1;
+    visibility: visible;
+    transition: .3s linear;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 50px;
+    border-top: 3px solid brown;
+    opacity: 0;
+    visibility: hidden;
+}
+
+nav ul ul li {
+    width: 120px;
+    display: list-item;
+    position: relative;
+    border: 1px solid brown;
+    border-top: none;
+}
+
+nav ul ul li a {
+    line-height: 50px;
+}
+
+nav ul ul ul {
+    border-top: none;
+}
+
+nav ul ul ul li {
+    position: relative;
+    top: -50px;
+    left: 120px;
+}
